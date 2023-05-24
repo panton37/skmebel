@@ -9,12 +9,14 @@
     grid-template-columns: 45% 1fr;
   }
   &__content {
+    min-width: 614px;
     margin-top: 75px;
     padding: 75px 98px 81px 80px;
     background: #ffffff;
     border-radius: 40px;
   }
   &__title {
+    margin-bottom: 23px;
     font-weight: 500;
     font-size: 80px;
     line-height: 100%;
@@ -22,7 +24,7 @@
   }
   &__description {
   }
-}
-
-.hero-btn {
+  .hero__btn {
+    margin-left: 57px;
+  }
 }

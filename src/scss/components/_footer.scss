@@ -1,12 +1,19 @@
 .footer {
+  margin-top: 80px;
+  padding-bottom: 40px;
   &__wrapper {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: 32px;
+    padding-top: 40px;
+    border-top: 1px solid #eeeeee;
   }
   &-list {
     list-style-type: none;
     &__item {
+      &:first-child {
+        text-align: left;
+      }
       &:nth-child(5) {
         min-width: 25%;
       }
@@ -20,6 +27,17 @@
     &__sublist {
       list-style-type: none;
       li {
+        transition: color 0.3s ease-in-out;
+        cursor: pointer;
+        &:focus {
+          outline: none;
+        }
+        &:hover {
+          color: var(--hover-color);
+        }
+        &:active {
+          color: var(--hover-color);
+        }
         &:not(:last-child) {
           margin-bottom: 14px;
         }

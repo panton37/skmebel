@@ -2,39 +2,46 @@
   <section class="calc container" id="calc">
     <div class="calc__wrapper">
       <div class="calc-form">
-        <h3 class="calc-form__header caption-60">
-          Рассчитать стоимость вашей кухни
-        </h3>
-        <p class="calc-form__sub-header caption-36">
-          Какую кухню рассматривайте?
-        </p>
-        <form class="form">
-          <fieldset class="calc-form__radios">
-            <label class="radio-label">
-              <input type="radio" name="type" value="straight" id="straight" />
-              Прямая
-            </label>
-            <label class="radio-label">
-              <input
-                type="radio"
-                name="type"
-                value="corner"
-                id="corner"
-                checked
-              />
-              Угловая
-            </label>
-            <label class="radio-label">
-              <input
-                type="radio"
-                name="type"
-                value="individual"
-                id="individual"
-              />
-              Индивидуальная
-            </label>
-          </fieldset>
-        </form>
+        <div>
+          <h3 class="calc-form__header caption-60">
+            Рассчитать стоимость вашей кухни
+          </h3>
+          <p class="calc-form__sub-header caption-36">
+            Какую кухню рассматривайте?
+          </p>
+          <form class="form">
+            <fieldset class="calc-form__radios">
+              <label class="radio-label">
+                <input
+                  type="radio"
+                  name="type"
+                  value="straight"
+                  id="straight"
+                />
+                <span>Прямая</span>
+              </label>
+              <label class="radio-label">
+                <input
+                  type="radio"
+                  name="type"
+                  value="corner"
+                  id="corner"
+                  checked
+                />
+                <span>Угловая</span>
+              </label>
+              <label class="radio-label">
+                <input
+                  type="radio"
+                  name="type"
+                  value="individual"
+                  id="individual"
+                />
+                <span>Индивидуальная</span>
+              </label>
+            </fieldset>
+          </form>
+        </div>
         <div class="calc-control">
           <a href="#" class="primary-btn inactive-btn">Назад</a>
           <ul class="calc-control__pagination">

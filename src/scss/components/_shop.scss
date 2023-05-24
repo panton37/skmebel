@@ -1,5 +1,5 @@
 .shop {
-  margin-top: 110px;
+  margin-bottom: 100px;
   &__container {
     padding-left: var(--container-offset);
   }
@@ -7,6 +7,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 32px;
     h2 {
       font-weight: 500;
       font-size: 60px;

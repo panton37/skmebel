@@ -3,6 +3,14 @@
   &__post-wrapper {
     display: grid;
     grid-template-columns: 1fr 46%;
+    .about-post {
+      &__header {
+        margin-bottom: 45px;
+        &:not(:first-child) {
+          margin-top: 100px;
+        }
+      }
+    }
     &_second-post {
       margin-top: 100px;
       gap: 100px;
