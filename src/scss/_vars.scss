@@ -1,0 +1,24 @@
+// если вы хотите использовать sass-переменные - удалите root
+// colors
+:root {
+  // base
+  --font-family: "Inter", sans-serif;
+  --content-width: 1760px;
+  --container-offset: 80px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+
+  --header-height: 80px;
+
+  // colors
+  --base-font-color: #17191c;
+  --blind-font-color: #9da4af;
+  --accent-color: #e42038;
+  --hover-color: #2086e4;
+  --light-accent: #fce9eb;
+  --light-color: #fff;
+  --dark-bg: #f4f6fa;
+  --input-text-color: #737d8c;
+
+  // animation
+  --hover-time: 0.3s;
+}

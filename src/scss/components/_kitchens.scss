@@ -1,0 +1,34 @@
+.kitchens {
+  margin-bottom: 100px;
+  &__wrapper {
+    display: flex;
+    position: relative;
+    &:nth-child(2) {
+      flex-direction: row-reverse;
+      margin-top: 100px;
+      .kitchens-text {
+        position: absolute;
+        max-width: 857px;
+        top: 60px;
+        left: 80px;
+      }
+    }
+  }
+  &__image {
+    width: 60%;
+    img {
+      border-radius: 60px;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  .kitchens-text {
+    position: absolute;
+    max-width: 857px;
+    top: 60px;
+    right: 80px;
+    padding: 60px 65px 99px 65px;
+    background: #ffffff;
+    border-radius: 40px;
+  }
+}

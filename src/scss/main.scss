@@ -1,0 +1,19 @@
+// базовые подключения
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+@import "utils";
+
+// подключения компонентов страницы
+@import "./components/header";
+@import "./components/hero";
+@import "./components/projects";
+@import "./components/cta";
+@import "./components/carusel";
+@import "./components/kitchens";
+@import "./components/shop";
+@import "./components/calc";
+@import "./components/about";
+@import "./components/cta-big";
+@import "./components/footer";

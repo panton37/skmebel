@@ -1,0 +1,40 @@
+.cta {
+  margin-bottom: calc(100px + 320px);
+  .cta__wrapper {
+    .cta__bg-img {
+      position: relative;
+      min-width: 100%;
+      min-height: 559px;
+      background-image: url("../../img/styles-section.jpg");
+      background-repeat: no-repeat;
+      object-fit: cover;
+      background-size: cover;
+      border-radius: 60px;
+      .cta-text__wrapper {
+        transform: translateY(332px);
+        min-width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+      .cta__text {
+        max-width: calc(var(--content-width) - var(--container-offset) * 2);
+        max-width: calc(100% - var(--container-offset) * 2);
+        background: #ffffff;
+        border-radius: 40px;
+        padding: 75px 80px 56px 80px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .cta__header {
+          margin-bottom: 45px;
+        }
+        .cta__description {
+          margin-bottom: 50px;
+        }
+        .cta__btn {
+          align-self: center;
+        }
+      }
+    }
+  }
+}
