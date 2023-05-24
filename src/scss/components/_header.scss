@@ -1,4 +1,5 @@
 .header {
+  margin-bottom: 20px;
   &__container {
     min-height: var(--header-height);
     display: flex;
@@ -68,9 +69,8 @@
           }
           &:hover {
             color: var(--hover-color);
-            img {
-              filter: invert(67%) sepia(95%) saturate(5217%) hue-rotate(190deg)
-                brightness(94%) contrast(90%);
+            svg path {
+              fill: var(--hover-color);
             }
           }
           &:active {

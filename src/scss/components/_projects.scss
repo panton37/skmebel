@@ -53,9 +53,12 @@
   }
 
   .production__video {
-    position: relative;
+    display: grid;
+    grid-template-areas: stack;
+    place-items: center;
     min-width: 56%;
     .prod-vid {
+      grid-area: stack;
       min-width: 100%;
       max-height: 594px;
       min-height: 100%;
@@ -63,9 +66,7 @@
       border-radius: 0px 0px 40px 0px;
     }
     .play-btn {
-      position: absolute;
-      top: calc(50% - 83px);
-      left: calc(50% - 83px);
+      grid-area: stack;
       cursor: pointer;
     }
   }

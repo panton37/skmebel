@@ -8,6 +8,7 @@
       margin-top: 100px;
       .kitchens-text {
         position: absolute;
+        grid-area: stack;
         max-width: 857px;
         top: 60px;
         left: 80px;
@@ -18,6 +19,7 @@
     }
   }
   &__image {
+    grid-area: stack;
     width: 60%;
     img {
       border-radius: 60px;
@@ -27,6 +29,7 @@
   }
   .kitchens-text {
     position: absolute;
+    grid-area: stack;
     max-width: 857px;
     top: 60px;
     right: 80px;
