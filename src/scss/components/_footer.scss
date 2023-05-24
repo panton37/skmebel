@@ -11,6 +11,13 @@
   &-list {
     list-style-type: none;
     &__item {
+      .header-phone {
+        display: flex;
+        align-items: center;
+      }
+      .go-up {
+        margin-bottom: 15px;
+      }
       &:first-child {
         text-align: left;
       }

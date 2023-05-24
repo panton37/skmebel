@@ -40,8 +40,21 @@
           align-items: center;
           justify-content: center;
           list-style-type: none;
-          .pagination-item:not(:last-child) {
-            margin-right: 29px;
+          cursor: pointer;
+          transition: color 0.3s ease-in-out;
+          .pagination-item {
+            &_visited {
+              color: var(--light-grey);
+            }
+            &_current {
+              color: var(--hover-color);
+            }
+            &:not(:last-child) {
+              margin-right: 29px;
+            }
+            &:hover {
+              color: var(--hover-color);
+            }
           }
         }
       }

@@ -25,15 +25,15 @@
     &__link {
       text-decoration: none;
       color: var(--base-font-color);
-      transition: color 0.3 ease-in-out;
+      transition: color 0.3s ease-in-out;
       &:focus {
         outline: none;
       }
       &:hover {
-        color: var(--accent-color);
+        color: var(--hover-color);
       }
       &:active {
-        color: var(--accent-color);
+        color: var(--hover-color);
       }
     }
     .contact-list {
@@ -52,10 +52,29 @@
             outline: none;
           }
           &:hover {
-            color: var(--accent-color);
+            color: var(--hover-color);
           }
           &:active {
-            color: var(--accent-color);
+            color: var(--hover-color);
+          }
+        }
+        .header-phone {
+          display: flex;
+          align-items: center;
+          transition: all 0.3s ease-in-out;
+          cursor: pointer;
+          &:focus {
+            outline: none;
+          }
+          &:hover {
+            color: var(--hover-color);
+            img {
+              filter: invert(67%) sepia(95%) saturate(5217%) hue-rotate(190deg)
+                brightness(94%) contrast(90%);
+            }
+          }
+          &:active {
+            color: var(--hover-color);
           }
         }
         .whatsapp-icon {
