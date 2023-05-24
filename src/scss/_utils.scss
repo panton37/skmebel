@@ -1,4 +1,18 @@
-// ----- BUTTONS -----
+// Media Quories
+@use "mq" as * with (
+  $breakpoints: (
+    mobile: 320px,
+    tablet: 740px,
+    desktop: 980px,
+    wide: 1300px,
+  )
+);
+
+// @include mq($from: mobile, $until: tablet) {
+//   background: blue;
+// }
+
+// Buttons
 .primary-btn {
   background: var(--accent-color);
   border-radius: 20px;
