@@ -88,10 +88,11 @@
 }
 
 .ul-inside {
-  list-style-position: inside;
-}
-.ul-outside {
   list-style-position: outside;
+  padding-left: 1.5em;
+  @include mq.mq($until: mobile) {
+    padding-left: 1em;
+  }
 }
 
 .text-16 {

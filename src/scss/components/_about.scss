@@ -36,6 +36,12 @@
           letter-spacing: -0.02em;
         }
       }
+      &__ul {
+        margin-bottom: 52px;
+        @include mq.mq($until: mobile) {
+          margin-bottom: 36px;
+        }
+      }
       &__text {
         @include mq.mq($until: mobile) {
           font-weight: 400;
