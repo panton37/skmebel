@@ -3,29 +3,87 @@
   h1 {
     padding-left: 80px;
     margin-bottom: 49px;
+    @include mq.mq($until: mobile) {
+      padding-left: 0px;
+      margin-bottom: 15px;
+      font-weight: 500;
+      font-size: 36px;
+      line-height: 105%;
+      letter-spacing: -0.02em;
+    }
   }
 }
 
 .projects__wrapper {
   margin: 0 auto;
   display: grid;
+  grid-template-areas:
+    "images project1"
+    "images project2"
+    "images project3";
   grid-template-columns: 56% 1fr;
 
-  .projects__images {
-    .project-img {
-      min-width: 100%;
-      min-height: 100%;
-      max-height: 591px;
-      object-fit: cover;
-      border-radius: 40px 0px 0px 0px;
+  @include mq.mq($until: mobile) {
+    grid-template-areas:
+      "image1"
+      "project1"
+      "image2"
+      "project2"
+      "image3"
+      "project3";
+    grid-template-columns: 1fr;
+  }
+
+  .project-img {
+    min-width: 100%;
+    min-height: 100%;
+    max-height: 591px;
+    object-fit: cover;
+    border-radius: 40px 0px 0px 0px;
+    grid-area: images;
+    @include mq.mq($until: mobile) {
+      border-radius: 12px;
+      min-width: auto;
+      min-height: auto;
+      object-fit: contain;
+      margin-bottom: 15px;
     }
   }
-  .projects__control {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  @include mq.mq($until: mobile) {
+    .project-img-1 {
+      grid-area: image1;
+    }
+    .project-img-2 {
+      grid-area: image2;
+    }
+    .project-img-3 {
+      grid-area: image3;
+    }
+  }
+
+  .project-1 {
+    grid-area: project1;
+  }
+  .project-2 {
+    grid-area: project2;
+  }
+  .project-3 {
+    grid-area: project3;
+  }
+
+  .project {
     padding: 30px 80px;
-    .project-header {
+    @include mq.mq($until: mobile) {
+      padding: 0px;
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+    &-header {
+      margin-bottom: 10px;
+      @include mq.mq($until: mobile) {
+        margin-bottom: 8px;
+      }
       &_active {
         color: #2086e4;
       }
@@ -38,18 +96,29 @@
     }
   }
 }
+
+// PRODUCTION
+
 .production {
   margin-top: 103px;
+  @include mq.mq($until: mobile) {
+    margin-top: 50px;
+  }
+  &__header {
+    margin-bottom: 25px;
+  }
+  &__description {
+    margin-bottom: 30px;
+  }
 }
 
 .production__wrapper {
   display: flex;
   justify-content: space-between;
   gap: 70px;
-
-  .production__text {
-    .production__description {
-    }
+  @include mq.mq($until: mobile) {
+    flex-direction: column;
+    gap: 0px;
   }
 
   .production__video {
@@ -64,10 +133,17 @@
       min-height: 100%;
       object-fit: cover;
       border-radius: 0px 0px 40px 0px;
+      @include mq.mq($until: mobile) {
+        border-radius: 12px;
+      }
     }
     .play-btn {
       grid-area: stack;
       cursor: pointer;
+      @include mq.mq($until: mobile) {
+        width: 93px;
+        height: 93px;
+      }
     }
   }
 }

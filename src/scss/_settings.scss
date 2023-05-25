@@ -91,6 +91,10 @@ a {
   margin: 0 auto;
   padding: 0 var(--container-offset);
   max-width: var(--container-width);
+  @include mq.mq($until: mobile) {
+    padding: 0 var(--mob-container-offset);
+    max-width: var(--mob-container-width);
+  }
 }
 
 .js-focus-visible :focus:not(.focus-visible) {

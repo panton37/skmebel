@@ -1,3 +1,5 @@
+@use "./mixins/mq" as mq;
+
 // базовые подключения
 @import "vars";
 @import "mixins";

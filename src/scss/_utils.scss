@@ -53,6 +53,10 @@
   font-size: 60px;
   line-height: 110%;
   letter-spacing: -0.02em;
+  @include mq.mq($until: mobile) {
+    font-size: 32px;
+    line-height: 105%;
+  }
 }
 .caption-36 {
   font-weight: 500;
@@ -77,6 +81,10 @@
   font-size: 20px;
   line-height: 150%;
   letter-spacing: -0.01em;
+  @include mq.mq($until: mobile) {
+    font-size: 16px;
+    line-height: 140%;
+  }
 }
 .text-16 {
   font-weight: 500;
