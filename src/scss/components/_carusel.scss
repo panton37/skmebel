@@ -7,16 +7,30 @@
 }
 
 .carusel {
-  margin-top: calc(100px + 320px);
+  margin-bottom: 100px;
+  padding: 0px;
+  padding-left: 20px;
 }
 
 .carusel-list-wrapper {
   min-width: 100%;
+  display: grid;
+  grid-template-columns: repeat(1fr);
+  @include mq.mq($until: mobile) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .swiper-slide {
-  min-width: 553px;
   min-height: 368px;
+  @include mq.mq($until: mobile) {
+    min-height: 214px;
+    max-width: 322px; // Slide size on mobile
+  }
+  img {
+    min-height: 100%;
+    border-radius: 40px;
+  }
 }
 
 .carusel-btn {
@@ -34,4 +48,10 @@
 }
 .carusel-next {
   right: calc(10px - 28px);
+}
+@include mq.mq($until: mobile) {
+  .carusel-prev,
+  .carusel-next {
+    display: none;
+  }
 }

@@ -1,5 +1,15 @@
 .cta {
   margin-bottom: calc(100px + 320px);
+
+  @include mq.mq($until: mobile) {
+    margin-bottom: calc(50px + 161px);
+    background-image: url("../../img/styles-section.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: auto;
+    border-radius: 0px;
+    padding: 0px;
+  }
   .cta__wrapper {
     .cta__bg-img {
       position: relative;
@@ -10,14 +20,21 @@
       object-fit: cover;
       background-size: cover;
       border-radius: 60px;
+      @include mq.mq($until: mobile) {
+        min-height: auto;
+        background: none;
+      }
       .cta-text__wrapper {
         transform: translateY(332px);
         min-width: 100%;
         display: flex;
         justify-content: center;
+        @include mq.mq($until: mobile) {
+          transform: translateY(161px);
+        }
       }
       .cta__text {
-        max-width: calc(var(--content-width) - var(--container-offset) * 2);
+        // max-width: calc(var(--content-width) - var(--container-offset) * 2);
         max-width: calc(100% - var(--container-offset) * 2);
         background: #ffffff;
         border-radius: 40px;
@@ -25,14 +42,26 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        @include mq.mq($until: mobile) {
+          padding: 20px 15px;
+          max-width: 100%;
+        }
         .cta__header {
           margin-bottom: 45px;
+          @include mq.mq($until: mobile) {
+            margin-bottom: 25px;
+          }
         }
         .cta__description {
           margin-bottom: 50px;
+          @include mq.mq($until: mobile) {
+            margin-bottom: 30px;
+          }
         }
         .cta__btn {
           align-self: center;
+          min-width: 100%;
+          text-align: center;
         }
       }
     }

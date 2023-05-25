@@ -27,6 +27,22 @@
       centeredSlides: true,
       direction: "horizontal",
       loop: true,
+      breakpoints: {
+        // when window width is >= 320px
+        10: {
+          slidesPerView: "auto",
+          spaceBetween: 10,
+          centeredSlides: false,
+          navigation: {
+            enabled: false,
+          },
+        },
+        // when window width is >= 480px
+        401: {
+          slidesPerView: 3,
+          spaceBetween: 51,
+        },
+      },
 
       // Navigation arrows
       navigation: {
