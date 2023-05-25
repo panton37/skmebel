@@ -4,8 +4,16 @@
     display: grid;
     grid-template-areas: "stack";
     min-height: 587px;
+    @include mq.mq($until: mobile) {
+      display: flex;
+      flex-direction: column;
+      min-height: 0px;
+    }
     &:first-child {
       margin-bottom: 100px;
+      @include mq.mq($until: mobile) {
+        margin-bottom: 50px;
+      }
     }
   }
   &__header {
@@ -17,12 +25,22 @@
     padding: 60px 65px 99px 65px;
     background: #ffffff;
     border-radius: 40px;
+    @include mq.mq($until: mobile) {
+      margin-top: 0px;
+      width: 100%;
+      padding: 0px;
+      background: none;
+      border-radius: 0px;
+    }
   }
   &__text-wrapper {
     grid-area: stack;
     display: flex;
     justify-content: flex-end;
     height: fit-content;
+    @include mq.mq($until: mobile) {
+      grid-area: none;
+    }
   }
   &__image {
     grid-area: stack;
@@ -31,6 +49,14 @@
     width: 60%;
     img {
       border-radius: 60px;
+    }
+    @include mq.mq($until: mobile) {
+      grid-area: none;
+      width: 100%;
+      margin-bottom: 15px;
+      img {
+        border-radius: 12px;
+      }
     }
   }
 }
