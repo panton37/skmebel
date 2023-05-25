@@ -1,5 +1,8 @@
 .shop {
   margin-bottom: 100px;
+  @include mq.mq($until: mobile) {
+    margin-bottom: 50px;
+  }
   &__container {
     padding-left: var(--container-offset);
   }
@@ -8,20 +11,68 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 32px;
+    @include mq.mq($until: mobile) {
+      margin-bottom: 25px;
+    }
     h2 {
       font-weight: 500;
       font-size: 60px;
       line-height: 110%;
       letter-spacing: -0.02em;
       color: #17191c;
+      @include mq.mq($until: mobile) {
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 105%;
+        letter-spacing: -0.02em;
+      }
+    }
+  }
+  &__header-wrapp {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    @include mq.mq($until: mobile) {
+      justify-content: flex-start;
+      gap: 9px;
+    }
+  }
+  &__header-icon {
+    svg {
+      @include mq.mq($until: mobile) {
+        width: 21px;
+        height: 21px;
+        path {
+          fill: #252528;
+        }
+      }
+    }
+  }
+  &__header-mob-link {
+    display: none;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: #252528;
+    @include mq.mq($until: mobile) {
+      display: flex;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 140%;
+      color: #252528;
+      opacity: 0.4;
     }
   }
   .shop-list {
     display: grid;
-    /*   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); */
     grid-template-columns: repeat(auto-fit, minmax(363px, 1fr));
     grid-gap: 49px;
     list-style-type: none;
+    @include mq.mq($until: mobile) {
+      grid-template-columns: repeat(auto-fit, minmax(173px, 1fr));
+      grid-gap: 14px;
+    }
     .shop-item {
       cursor: pointer;
       &:hover {
@@ -35,6 +86,18 @@
       }
       &__header {
         transition: color var(--hover-time);
+        @include mq.mq($until: mobile) {
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 110%;
+        }
+      }
+      &__decription {
+        @include mq.mq($until: mobile) {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 140%;
+        }
       }
       &__price {
         margin-top: 27px;
@@ -42,6 +105,11 @@
         font-size: 30px;
         line-height: 130%;
         color: #17191c;
+        @include mq.mq($until: mobile) {
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 110%;
+        }
       }
     }
   }
