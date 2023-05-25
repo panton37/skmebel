@@ -56,9 +56,9 @@
     }
     @include mq.mq($until: mobile) {
       grid-area: none;
-      width: 100%;
       margin-bottom: 15px;
       img {
+        width: 100%;
         border-radius: 12px;
       }
     }
