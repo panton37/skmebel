@@ -1,40 +1,120 @@
 .kitchens {
   margin-bottom: 100px;
   &__wrapper {
-    display: flex;
-    position: relative;
-    &:nth-child(2) {
-      flex-direction: row-reverse;
-      margin-top: 100px;
-      .kitchens-text {
-        position: absolute;
-        grid-area: stack;
-        max-width: 857px;
-        top: 60px;
-        left: 80px;
-      }
-    }
-    .kitchens__header {
-      margin-bottom: 15px;
+    display: grid;
+    grid-template-areas: "stack";
+    min-height: 587px;
+    &:first-child {
+      margin-bottom: 100px;
     }
   }
-  &__image {
-    grid-area: stack;
+  &__header {
+    margin-bottom: 15px;
+  }
+  &__text {
+    margin-top: 60px;
     width: 60%;
-    img {
-      border-radius: 60px;
-      width: 100%;
-      object-fit: cover;
-    }
-  }
-  .kitchens-text {
-    position: absolute;
-    grid-area: stack;
-    max-width: 857px;
-    top: 60px;
-    right: 80px;
     padding: 60px 65px 99px 65px;
     background: #ffffff;
     border-radius: 40px;
   }
+  &__text-wrapper {
+    grid-area: stack;
+    display: flex;
+    justify-content: flex-end;
+    height: fit-content;
+  }
+  &__image {
+    grid-area: stack;
+    display: flex;
+    justify-content: flex-start;
+    width: 60%;
+    img {
+      border-radius: 60px;
+    }
+  }
 }
+
+// .kitchens {
+//   margin-bottom: 100px;
+//   &__wrapper {
+//     // display: flex;
+//     // position: relative;
+//     grid-template-areas: "stack";
+//     place-items: center;
+//     &:nth-child(2) {
+//       flex-direction: row-reverse;
+//       margin-top: 100px;
+//       .kitchens-text {
+//         // position: absolute;
+//         grid-area: stack;
+//         max-width: 857px;
+//         top: 60px;
+//         left: 80px;
+//       }
+//     }
+//     .kitchens__header {
+//       margin-bottom: 15px;
+//     }
+//   }
+//   &__image {
+//     grid-area: stack;
+//     width: 60%;
+//     img {
+//       border-radius: 60px;
+//       width: 100%;
+//       object-fit: cover;
+//     }
+//   }
+//   .kitchens-text {
+//     // position: absolute;
+//     grid-area: stack;
+//     max-width: 857px;
+//     top: 60px;
+//     right: 80px;
+//     padding: 60px 65px 99px 65px;
+//     background: #ffffff;
+//     border-radius: 40px;
+//   }
+// }
+
+// .kitchens {
+//   margin-bottom: 100px;
+//   &__wrapper {
+//     display: flex;
+//     position: relative;
+//     &:nth-child(2) {
+//       flex-direction: row-reverse;
+//       margin-top: 100px;
+//       .kitchens-text {
+//         position: absolute;
+//         grid-area: stack;
+//         max-width: 857px;
+//         top: 60px;
+//         left: 80px;
+//       }
+//     }
+//     .kitchens__header {
+//       margin-bottom: 15px;
+//     }
+//   }
+//   &__image {
+//     grid-area: stack;
+//     width: 60%;
+//     img {
+//       border-radius: 60px;
+//       width: 100%;
+//       object-fit: cover;
+//     }
+//   }
+//   .kitchens-text {
+//     position: absolute;
+//     grid-area: stack;
+//     max-width: 857px;
+//     top: 60px;
+//     right: 80px;
+//     padding: 60px 65px 99px 65px;
+//     background: #ffffff;
+//     border-radius: 40px;
+//   }
+// }

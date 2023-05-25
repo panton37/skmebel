@@ -60,8 +60,10 @@
         }
         .cta__btn {
           align-self: center;
-          min-width: 100%;
           text-align: center;
+          @include mq.mq($until: mobile) {
+            min-width: 100%;
+          }
         }
       }
     }

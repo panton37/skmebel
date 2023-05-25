@@ -8,8 +8,11 @@
 
 .carusel {
   margin-bottom: 100px;
-  padding: 0px;
-  padding-left: 20px;
+  @include mq.mq($until: mobile) {
+    margin-bottom: 50px;
+    padding: 0px;
+    padding-left: 20px;
+  }
 }
 
 .carusel-list-wrapper {
