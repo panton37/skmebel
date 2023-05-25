@@ -1,13 +1,46 @@
 .about {
   margin-top: 100px;
+  @include mq.mq($until: mobile) {
+    margin-top: 0px;
+  }
   &__post-wrapper {
     display: grid;
     grid-template-columns: 1fr 46%;
+    @include mq.mq($until: mobile) {
+      grid-template-columns: 1fr;
+    }
     .about-post {
+      @include mq.mq($until: mobile) {
+        padding-top: 15px;
+        order: 2;
+        z-index: 1;
+        transform: translateY(-175px);
+        background-color: #fff;
+      }
       &__header {
         margin-bottom: 45px;
         &:not(:first-child) {
           margin-top: 100px;
+          @include mq.mq($until: mobile) {
+            margin-top: 50px;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 130%;
+          }
+        }
+        @include mq.mq($until: mobile) {
+          margin-bottom: 25px;
+          font-weight: 500;
+          font-size: 32px;
+          line-height: 105%;
+          letter-spacing: -0.02em;
+        }
+      }
+      &__text {
+        @include mq.mq($until: mobile) {
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 140%;
         }
       }
     }
@@ -18,6 +51,14 @@
   }
   .post-img {
     float: right;
+    @include mq.mq($until: mobile) {
+      padding-left: calc(var(--mob-container-offset) + 20px);
+      padding-right: calc(var(--mob-container-offset) + 20px);
+      transform: translateY(-36px);
+      order: 1;
+    }
+    &__wrapper {
+    }
     &_second {
       float: right;
       border-radius: 40px;
