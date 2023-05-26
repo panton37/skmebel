@@ -3,57 +3,54 @@
   margin-top: 20px;
   min-height: fit-content;
   @include mq.mq($until: mobile) {
-    margin-bottom: 52px;
-    min-height: auto;
+    margin-bottom: 50px;
   }
   &-content__wrapper {
     grid-area: stack;
     min-width: 100%;
     min-height: 100%;
+    @include mq.mq($until: mobile) {
+      grid-area: hero-content;
+    }
   }
   &__wrapper {
     display: grid;
     place-items: center;
     grid-template-areas: "stack";
     @include mq.mq($until: mobile) {
-      place-items: unset;
       grid-template-areas:
         "hero-image"
         "hero-content";
-      grid-template-columns: 1fr;
     }
   }
   &__content {
     padding: 75px 98px;
     max-width: fit-content;
     min-height: fit-content;
-    // transform: translate(-85%, -45%);
     margin-top: 6%;
-    margin-left: -12%;
     background: #ffffff;
-    border-radius: 40px;
-  }
-  .hero-content {
+    border-radius: 0px 40px 40px 0px;
+
     display: grid;
     grid-template-areas:
       "title"
       "btn"
       "desc";
     @include mq.mq($until: mobile) {
-      grid-area: hero-content;
+      padding: 0;
+      margin: 0;
       grid-template-areas:
         "title"
         "desc"
         "btn";
-      grid-template-columns: 1fr;
-      transform: translateX(0px);
-      border-radius: 12px;
-      padding: 0px;
     }
+  }
+  .hero-content {
   }
   &__title {
     grid-area: title;
     margin-bottom: 10px;
+
     @include mq.mq($until: mobile) {
       font-weight: 500;
       font-size: 36px;
@@ -61,13 +58,21 @@
       letter-spacing: -0.02em;
     }
   }
+  &__btn-wrap {
+    @include mq.mq($until: mobile) {
+      min-width: 100%;
+    }
+  }
   &__btn {
     grid-area: btn;
+    float: right;
+    margin-top: -76px;
+    margin-right: -50px;
     @include mq.mq($until: mobile) {
+      margin: 20px 0px 0px 0px;
+      float: none;
       display: flex;
-      align-items: center;
       justify-content: center;
-      min-width: 100%;
     }
   }
   &__description {
@@ -76,6 +81,11 @@
     font-size: 16px;
     line-height: 140%;
     margin-bottom: 20px;
+    @include mq.mq($until: mobile) {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 140%;
+    }
   }
 
   &__bg {
@@ -84,8 +94,6 @@
     @include mq.mq($until: mobile) {
       grid-area: hero-image;
       margin-bottom: 25px;
-      img {
-      }
     }
   }
 }

@@ -152,3 +152,9 @@ body {
     color: var(--hover-color);
   }
 }
+
+.mob-del {
+  @include mq.mq($until: mobile) {
+    display: none;
+  }
+}
