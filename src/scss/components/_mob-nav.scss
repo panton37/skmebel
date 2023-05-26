@@ -1,0 +1,25 @@
+.mob-nav {
+  position: fixed;
+  z-index: 2;
+  bottom: 0;
+  min-width: 100%;
+  background-color: #fff;
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    min-height: 56px;
+    list-style-type: none;
+  }
+  &__item-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+  }
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #e3e5e8;
+  }
+}

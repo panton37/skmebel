@@ -1,64 +1,15 @@
-// .hero {
-//   margin-bottom: 100px;
-//   min-height: 820px;
-//   background-image: url(../../img/hero.jpg);
-//   background-repeat: no-repeat;
-//   background-position: calc(50% + 64px) 50%;
-//   @include mq.mq($until: mobile) {
-//     background-size: contain;
-//     background-position: 0% 50%;
-//   }
-//   &__wrapper {
-//     display: grid;
-//     grid-template-columns: 45% 1fr;
-//     @include mq.mq($until: mobile) {
-//       grid-template-columns: 1fr;
-//     }
-//   }
-//   &__content {
-//     transform: translateX(-36px);
-//     min-width: fit-content;
-//     margin-top: 75px;
-//     padding: 75px 98px 81px 80px;
-//     background: #ffffff;
-//     border-radius: 40px;
-//     @include mq.mq($until: mobile) {
-//       min-width: 100%;
-//       margin-top: 236px;
-//       padding: 0px;
-//       transform: translateX(0px);
-//     }
-//   }
-//   &__title {
-//     margin-bottom: 23px;
-//     font-weight: 500;
-//     font-size: 80px;
-//     line-height: 100%;
-//     letter-spacing: -0.02em;
-//     @include mq.mq($until: mobile) {
-//       font-weight: 500;
-//       font-size: 36px;
-//       line-height: 105%;
-//       letter-spacing: -0.02em;
-//     }
-//   }
-//   &__description {
-//     font-weight: 400;
-//     font-size: 16px;
-//     line-height: 140%;
-//   }
-//   .hero__btn {
-//     margin-left: 57px;
-//   }
-// }
-
 .hero {
   margin-bottom: 100px;
   margin-top: 20px;
-  min-height: 820px;
+  min-height: fit-content;
   @include mq.mq($until: mobile) {
     margin-bottom: 52px;
     min-height: auto;
+  }
+  &-content__wrapper {
+    grid-area: stack;
+    min-width: 100%;
+    min-height: 100%;
   }
   &__wrapper {
     display: grid;
@@ -73,9 +24,12 @@
     }
   }
   &__content {
-    grid-area: stack;
     padding: 75px 98px;
-    transform: translateX(-85%);
+    max-width: fit-content;
+    min-height: fit-content;
+    // transform: translate(-85%, -45%);
+    margin-top: 6%;
+    margin-left: -12%;
     background: #ffffff;
     border-radius: 40px;
   }
@@ -100,10 +54,12 @@
   &__title {
     grid-area: title;
     margin-bottom: 10px;
-    font-weight: 500;
-    font-size: 36px;
-    line-height: 105%;
-    letter-spacing: -0.02em;
+    @include mq.mq($until: mobile) {
+      font-weight: 500;
+      font-size: 36px;
+      line-height: 105%;
+      letter-spacing: -0.02em;
+    }
   }
   &__btn {
     grid-area: btn;

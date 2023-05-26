@@ -1,4 +1,7 @@
 .header {
+  @include mq.mq($until: mobile) {
+    display: none;
+  }
   margin-bottom: 20px;
   &__container {
     min-height: var(--header-height);
@@ -8,12 +11,14 @@
   }
   .nav {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     min-width: 100%;
     padding-left: var(--container-offset);
     padding-right: var(--container-offset);
     &__list {
+      flex-wrap: wrap;
       list-style-type: none;
       display: flex;
       align-items: center;
@@ -24,22 +29,11 @@
       }
     }
     &__link {
-      text-decoration: none;
-      color: var(--base-font-color);
-      transition: color 0.3s ease-in-out;
-      &:focus {
-        outline: none;
-      }
-      &:hover {
-        color: var(--hover-color);
-      }
-      &:active {
-        color: var(--hover-color);
-      }
     }
     .contact-list {
       list-style-type: none;
       display: flex;
+      flex-wrap: wrap;
       align-items: center;
       &__item {
         &:not(:last-child) {
@@ -48,34 +42,10 @@
         &:first-child {
           display: flex;
           align-items: center;
-          transition: color 0.3s ease-in-out;
-          &:focus {
-            outline: none;
-          }
-          &:hover {
-            color: var(--hover-color);
-          }
-          &:active {
-            color: var(--hover-color);
-          }
         }
         .header-phone {
           display: flex;
           align-items: center;
-          transition: all 0.3s ease-in-out;
-          cursor: pointer;
-          &:focus {
-            outline: none;
-          }
-          &:hover {
-            color: var(--hover-color);
-            svg path {
-              fill: var(--hover-color);
-            }
-          }
-          &:active {
-            color: var(--hover-color);
-          }
         }
         .whatsapp-icon {
           margin-right: 8px;
@@ -95,12 +65,3 @@
     color: var(--accent-color);
   }
 }
-
-.nav__link.focus-visible {
-  outline: 1px solid var(--accent-color);
-  outline-offset: 3px;
-}
-// .contact-list__item:first-child:focus-visible {
-//   outline: 1px solid var(--accent-color);
-//   outline-offset: 3px;
-// }

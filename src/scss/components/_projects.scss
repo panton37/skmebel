@@ -85,7 +85,9 @@
         margin-bottom: 8px;
       }
       &_active {
-        color: #2086e4;
+        a {
+          color: #2086e4;
+        }
       }
       span {
         font-weight: 500;

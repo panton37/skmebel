@@ -2,6 +2,9 @@
 // @include mq($from: mobile, $until: tablet) {
 //   background: blue;
 // }
+body {
+  position: relative;
+}
 
 // Buttons
 .primary-btn {
@@ -124,4 +127,28 @@
 .nowrap {
   display: flex;
   flex-wrap: nowrap;
+}
+
+.phone {
+  display: flex;
+  flex-shrink: 0;
+}
+
+.link-hover {
+  text-decoration: none;
+  color: var(--base-font-color);
+  transition: color 0.3s ease-in-out;
+  cursor: pointer;
+  &:focus {
+    outline: none;
+  }
+  &:hover {
+    color: var(--hover-color);
+    svg path {
+      fill: var(--hover-color);
+    }
+  }
+  &:active {
+    color: var(--hover-color);
+  }
 }

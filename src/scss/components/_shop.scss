@@ -75,10 +75,17 @@
     }
     .shop-item {
       cursor: pointer;
+      transition: color 0.3s ease-in-out;
       &:hover {
         .shop-item__header {
           color: var(--hover-color);
         }
+      }
+      &:focus {
+        outline: none;
+      }
+      &:active {
+        color: var(--hover-color);
       }
       img {
         width: 100%;
