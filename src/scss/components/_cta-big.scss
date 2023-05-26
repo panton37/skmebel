@@ -1,18 +1,55 @@
 .cta-big {
   margin-top: 100px;
-  padding-top: 75px;
-  padding-left: 80px;
-  padding-bottom: 80px;
 
-  background-image: url("../../img/kitchen_cta.png");
-  background-repeat: no-repeat;
-  background-position: center right;
+  // background-image: url("../../img/kitchen_cta.png");
+  // background-repeat: no-repeat;
+  // background-position: center right;
+  @include mq.mq($until: mobile) {
+    margin-top: 50px;
+    margin-bottom: 125px;
+  }
   &__wrapper {
     display: grid;
     grid-template-columns: 46% 1fr;
+    gap: 80px;
+    border-radius: 60px;
+    background-color: var(--dark-bg);
+    overflow: hidden;
+    @include mq.mq($until: mobile) {
+      grid-template-columns: 1fr;
+      gap: 26px;
+      border-radius: 12px;
+      overflow: unset;
+    }
+  }
+  &__text {
+    padding-top: 75px;
+    padding-left: 80px;
+    padding-bottom: 80px;
+    @include mq.mq($until: mobile) {
+      padding: 20px 20px 0px 20px;
+    }
+  }
+  &__img {
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      @include mq.mq($until: mobile) {
+        transform: translateY(90px);
+        margin-top: -90px;
+        float: right;
+        max-width: 85%;
+        height: 230px;
+        border-radius: 0 0 12px 0;
+      }
+    }
   }
   .contact-form {
     margin-top: 40px;
+    @include mq.mq($until: mobile) {
+      margin-top: 25px;
+    }
     &__input {
       min-width: 100%;
       font-weight: 400;
@@ -24,6 +61,11 @@
       padding: 17px 0px;
       border: none;
       border-bottom: 1px solid #e3e5e8;
+      @include mq.mq($until: mobile) {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 140%;
+      }
       &:focus {
         outline: none;
       }
@@ -33,6 +75,19 @@
       display: flex;
       align-items: center;
       gap: 30px;
+      @include mq.mq($until: mobile) {
+        margin-top: 50px;
+        flex-direction: column;
+        .order-btn {
+          width: 100%;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 130%;
+        }
+        .order-btn__wrap {
+          min-width: 100%;
+        }
+      }
     }
     .personal-data {
       color: var(--blind-font-color);
