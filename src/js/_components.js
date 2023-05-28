@@ -1,1 +1,1 @@
-// import "./components/dropdown.js";
+import "./components/tabs.js";
