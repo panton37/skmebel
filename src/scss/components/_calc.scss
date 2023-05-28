@@ -11,8 +11,10 @@
   }
   &__wrapper {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    // grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
     grid-column-gap: 69px;
+    grid-row-gap: 50px;
     max-width: 1400px;
     min-width: 100%;
     padding-left: 100px;
@@ -29,6 +31,7 @@
       &__radios {
         border: none;
         margin-top: 55px;
+        flex-wrap: wrap;
         @include mq.mq($until: mobile) {
           margin-top: 40px;
           flex-direction: column;

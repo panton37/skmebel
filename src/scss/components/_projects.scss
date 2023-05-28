@@ -125,9 +125,10 @@
 
   .production__video {
     display: grid;
-    grid-template-areas: stack;
+    grid-template-areas: "stack";
     place-items: center;
     min-width: 56%;
+    min-height: 100%;
     .prod-vid {
       grid-area: stack;
       min-width: 100%;

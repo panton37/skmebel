@@ -10,6 +10,7 @@
     justify-content: center;
   }
   .nav {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -19,10 +20,17 @@
     font-weight: 400;
     font-size: 20px;
     line-height: 130%;
+    // smaller font on small screen
     @include mq.mq($from: mobile, $until: wide) {
       font-weight: 400;
       font-size: 16px;
       line-height: 130%;
+    }
+    .top-nav-wrapper {
+      position: relative;
+      display: flex;
+      align-items: center;
+      margin-right: auto;
     }
     .header-burger-wrap {
       display: flex;
@@ -51,26 +59,55 @@
       }
       .header-burger-wrap {
         margin-right: 8px;
+        padding-top: 15px;
+        padding-bottom: 15px;
         width: auto;
         opacity: 1;
         transform: scale(1);
+        &:hover + .nav__list {
+          opacity: 1;
+          z-index: 1;
+        }
       }
-      .nav__item:not(:first-child) {
-        display: none;
-      }
+    }
+    .show-drop {
+      opacity: 1;
+      z-index: 1;
     }
     &__list {
       list-style-type: none;
       display: flex;
       align-items: center;
-      overflow: hidden;
+      transition: all 0.3s ease-in-out;
+      // hide menu on small criens
+      @include mq.mq($until: desktop) {
+        &:hover {
+          opacity: 1;
+          z-index: 1;
+        }
+        opacity: 0;
+        z-index: -1;
+
+        position: absolute;
+        flex-direction: column;
+        top: 50px;
+        min-width: 197px;
+        padding: 25px 30px 30px 30px;
+        background: #ffffff;
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.25);
+        border-radius: 18.4343px;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 130%;
+        align-items: start;
+        &:not(:last-child) {
+          margin-bottom: 10px;
+        }
+      }
     }
     &__item {
       &:not(:last-child) {
         margin-right: 12px;
-      }
-      &:first-child {
-        margin-right: 0px;
       }
     }
     // &__link {
