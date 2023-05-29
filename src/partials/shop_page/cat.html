@@ -1,16 +1,34 @@
-<section class="shop">
+<section class="shop shop__page">
   <div class="shop__header">
     <div class="shop__header-wrapp">
       <h2>Готовые кухни</h2>
     </div>
-    <span class="shop__header-mob-link">перейти</span>
   </div>
-  <ul class="shop-header__filter shop-header__filter">
-    <li class="shop-header__item shop-header__item_active">По популярности</li>
-    <li class="shop-header__item">Сначала дешевле</li>
-    <li class="shop-header__item">Сначала дороже</li>
-    <li class="shop-header__item">По скидке</li>
-  </ul>
+  <div class="header-filter-wrap">
+    <ul class="shop-header__filter">
+      <li class="shop-header__item shop-header__item_active">
+        По популярности
+      </li>
+      <li class="shop-header__item">Сначала дешевле</li>
+      <li class="shop-header__item">Сначала дороже</li>
+      <li class="shop-header__item">По скидке</li>
+    </ul>
+    <button class="grey-btn header-filter-btn">
+      По популярности
+      <svg
+        width="13"
+        height="8"
+        viewBox="0 0 13 8"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M0.699219 1.70005L2.09922 0.300049L6.69922 4.90005L11.2992 0.300049L12.6992 1.70005L6.69922 7.70005L0.699219 1.70005Z"
+          fill="#737D8C"
+        />
+      </svg>
+    </button>
+  </div>
   <ul class="shop-list">
     <li class="shop-item">
       <a href="#">
@@ -113,6 +131,21 @@
       </a>
     </li>
   </ul>
+  <div class="show-more-mob grey-btn">
+    Показать больше
+    <svg
+      width="13"
+      height="8"
+      viewBox="0 0 13 8"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M0.699219 1.70005L2.09922 0.300049L6.69922 4.90005L11.2992 0.300049L12.6992 1.70005L6.69922 7.70005L0.699219 1.70005Z"
+        fill="#2086E4"
+      />
+    </svg>
+  </div>
   <div class="shop__pagination shop-pagination">
     <div class="shop-pagination__wrapper">
       <div class="shop-pagination__link shop-pagination__link_disabled">
@@ -126,4 +159,5 @@
       <div class="shop-pagination__link">Далее</div>
     </div>
   </div>
+  @include('./promo2.html')
 </section>

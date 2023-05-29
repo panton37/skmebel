@@ -1,5 +1,8 @@
 .shop-page {
   min-width: 100%;
+  .shop__page {
+    margin-bottom: 0;
+  }
   &__breadcrumbs {
     width: 100%;
     margin-bottom: 27px;
@@ -12,8 +15,16 @@
     font-size: 14px;
     line-height: 140%;
     color: #454b54;
+    @include mq.mq($until: mobile) {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 140%;
+    }
   }
   .breadcrumbs__item {
+    @include mq.mq($until: mobile) {
+      flex-shrink: 0;
+    }
     display: flex;
     &:not(:last-child)::after {
       content: "·";
@@ -30,10 +41,39 @@
     display: grid;
     grid-template-columns: 363px 1fr;
     grid-column-gap: 50px;
+    @include mq.mq($until: mobile) {
+      grid-template-columns: 1fr;
+    }
   }
-  &__filter {
+  .show-more-mob {
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    min-width: auto;
+    max-width: fit-content;
+    padding-left: 24px;
+    padding-right: 24px;
+    border: 2px solid #eaf2fb;
+    border-radius: 12px;
+    background-color: #fff;
+    color: var(--hover-color);
   }
   &__cat {
+    .header-filter-wrap {
+      position: relative;
+      .header-filter-btn {
+        display: none;
+        &:hover {
+          svg path {
+            fill: var(--light-color);
+          }
+        }
+        @include mq.mq($until: mobile) {
+          display: flex;
+          margin-bottom: 30px;
+        }
+      }
+    }
     .shop-header {
       &__filter {
         margin-bottom: 30px;
@@ -45,6 +85,10 @@
         line-height: 150%;
         letter-spacing: -0.01em;
         color: #737d8c;
+        @include mq.mq($until: mobile) {
+          position: absolute;
+          transform: scale(0);
+        }
       }
       &__item {
         cursor: pointer;
@@ -59,6 +103,9 @@
   // FILTER
   .shop-filter {
     .filter-form {
+      @include mq.mq($until: mobile) {
+        display: none;
+      }
       .form-item {
         &:not(:last-child) {
           margin-bottom: 25px;
@@ -192,32 +239,17 @@
 }
 
 .reset-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-width: 100%;
-  padding-top: 22px;
-  padding-bottom: 22px;
-
-  background: #e6e9ef;
-  border-radius: 20px;
-  border: none;
-  cursor: pointer;
-
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 130%;
-  color: #737d8c;
-
-  transition: all 0.3s ease-in-out;
-  &:hover {
-    background-color: var(--accent-color);
-    color: var(--light-color);
-  }
 }
 
 .shop-pagination {
   margin-top: 30px;
+  margin-bottom: 100px;
+
+  @include mq.mq($until: mobile) {
+    display: none;
+    margin: 0px;
+    padding: 0px;
+  }
   .shop-pagination__wrapper {
     display: flex;
     justify-content: center;
@@ -256,6 +288,13 @@
 }
 
 .about-shop__img {
-  min-width: 600px;
+  max-width: 100%;
   margin-left: 30px;
+  @include mq.mq($until: mobile) {
+    display: none;
+  }
+}
+
+.about__post-wrapper .about-post-shop {
+  margin-top: 0px;
 }

@@ -6,6 +6,15 @@ body {
   position: relative;
 }
 
+.container-offset {
+  padding-left: var(--container-offset);
+  padding-right: var(--container-offset);
+  @include mq.mq($until: mobile) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
 // Buttons
 .primary-btn {
   background: var(--accent-color);
@@ -19,9 +28,15 @@ body {
   line-height: 130%;
   text-decoration: none;
   transition: all 0.3s ease-in-out;
+  svg path {
+    fill: var(--light-accent);
+  }
   &:hover {
     background: var(--light-accent);
     color: var(--accent-color);
+    svg path {
+      fill: var(--accent-color);
+    }
   }
 }
 .secondary-btn {
@@ -38,6 +53,37 @@ body {
     color: #ffffff;
   }
 }
+
+.grey-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 100%;
+  padding-top: 22px;
+  padding-bottom: 22px;
+
+  background: #e6e9ef;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 130%;
+  color: #737d8c;
+
+  transition: all 0.3s ease-in-out;
+
+  svg {
+    margin-left: 16px;
+  }
+
+  &:hover {
+    background-color: var(--accent-color);
+    color: var(--light-color);
+  }
+}
+
 .inactive-btn {
   background: #e6e9ef;
   color: var(--light-grey);
@@ -70,6 +116,10 @@ body {
   font-weight: 500;
   font-size: 40px;
   line-height: 120%;
+  @include mq.mq($until: mobile) {
+    font-size: 24px;
+    line-height: 130%;
+  }
 }
 .caption-30 {
   font-weight: 600;

@@ -1,5 +1,9 @@
 .promo {
   margin-bottom: 40px;
+  @include mq.mq($until: mobile) {
+    margin-top: 20px;
+    margin-bottom: 25px;
+  }
   &__wrapper {
     display: grid;
     grid-template-columns: max-content 1fr;
@@ -10,6 +14,10 @@
     background-repeat: no-repeat;
     background-position: 102% 0%;
     border-radius: 15px;
+    @include mq.mq($until: mobile) {
+      grid-template-columns: 1fr;
+      padding: 25px 30px 30px 30px;
+    }
   }
   &__link {
     position: relative;
@@ -20,17 +28,28 @@
     span {
       color: var(--accent-color);
     }
+    @include mq.mq($until: mobile) {
+      font-weight: 500;
+      font-size: 22px;
+      line-height: 140%;
+    }
   }
   &__deco {
     position: absolute;
     transform: rotate(-13deg);
     top: calc(50% - 93px);
     left: -24%;
+    @include mq.mq($until: mobile) {
+      display: none;
+    }
   }
   &__arrow-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
+    @include mq.mq($until: mobile) {
+      display: none;
+    }
   }
   &__arrow {
     display: flex;
@@ -51,34 +70,64 @@
 }
 
 .promo2 {
+  @include mq.mq($until: mobile) {
+    margin-bottom: 50px;
+  }
   &__wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 60px;
+    grid-row-gap: 30px;
     padding-top: 45px;
     padding-bottom: 45px;
     place-items: center;
     background: #f4f6fa;
     border-radius: 60px;
+    @include mq.mq($until: mobile) {
+      grid-template-columns: 1fr;
+      padding-top: 0px;
+      padding-bottom: 0px;
+      border-radius: 12px;
+    }
   }
   &__desc {
     padding-left: 100px;
+    @include mq.mq($until: mobile) {
+      padding: 25px 20px 0px 20px;
+    }
     h3 {
       margin-bottom: 13px;
       font-weight: 500;
       font-size: 40px;
       line-height: 120%;
+
+      @include mq.mq($until: mobile) {
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 105%;
+        letter-spacing: -0.02em;
+      }
     }
     p {
       font-weight: 400;
       font-size: 20px;
       line-height: 150%;
       letter-spacing: -0.01em;
+      @include mq.mq($until: mobile) {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 140%;
+      }
     }
   }
   &__btn {
     margin-top: 50px;
     display: inline-block;
+    @include mq.mq($until: mobile) {
+      margin-top: 30px;
+      min-width: 100%;
+      text-align: center;
+    }
   }
   &__img {
     min-width: 100%;
@@ -87,6 +136,14 @@
       width: 100%;
       border-radius: 40px;
       object-fit: cover;
+      padding-right: 45px;
+    }
+    @include mq.mq($until: mobile) {
+      img {
+        display: flex;
+        padding-right: 0px;
+        border-radius: 0px 0px 12px 12px;
+      }
     }
   }
 }
