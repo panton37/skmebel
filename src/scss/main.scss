@@ -1,13 +1,12 @@
 @use "./mixins/mq" as mq;
 
-// базовые подключения
 @import "vars";
 @import "mixins";
 @import "fonts";
 @import "settings";
 @import "utils";
 
-// подключения компонентов страницы
+// Main page
 @import "./components/header";
 @import "./components/hero";
 @import "./components/projects";
@@ -21,3 +20,7 @@
 @import "./components/footer";
 @import "./components/mob-footer";
 @import "./components/mob-nav";
+
+// Shop page
+@import "./components/shop_page/promo";
+@import "./components/shop_page/shop-page";
