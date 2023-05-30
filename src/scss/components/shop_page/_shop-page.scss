@@ -59,9 +59,9 @@
     color: var(--hover-color);
   }
   &__cat {
-    .header-filter-wrap {
+    .header-sort-wrap {
       position: relative;
-      .header-filter-btn {
+      .header-sort-btn {
         display: none;
         &:hover {
           svg path {
@@ -75,7 +75,7 @@
       }
     }
     .shop-header {
-      &__filter {
+      &__sort {
         margin-bottom: 30px;
         display: flex;
         gap: 30px;
@@ -100,193 +100,7 @@
       }
     }
   }
-  // FILTER
-  .shop-filter {
-    .filter-form {
-      @include mq.mq($until: mobile) {
-        display: none;
-      }
-      .form-item {
-        &:not(:last-child) {
-          margin-bottom: 25px;
-        }
-        &__header-wrapper {
-          margin-bottom: 15px;
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-        }
-        &__header {
-          font-style: normal;
-          font-weight: 600;
-          font-size: 30px;
-          line-height: 130%;
-        }
-        .filter-set {
-          border: none;
-          padding: 0;
-          opacity: 1;
-          transition: all 0.3s ease-in-out;
-          &_hide {
-            max-height: 0px;
-            overflow: hidden;
-            opacity: 0;
-          }
-        }
-
-        &__input-wrap {
-          display: flex;
-          .price-input {
-            padding: 16px 20px;
-            &:first-child {
-              max-width: 50%;
-              border: 2px solid #e0e5eb;
-              border-radius: 15px 0px 0px 15px;
-            }
-            &:last-child {
-              max-width: 50%;
-              border: 2px solid #e0e5eb;
-              border-radius: 0px 15px 15px 0px;
-            }
-          }
-        }
-        .show-more {
-          margin-top: 25px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-
-          cursor: pointer;
-          font-weight: 500;
-          font-size: 16px;
-          line-height: 130%;
-          color: #2086e4;
-
-          &::after {
-            content: url("../../../img/show-more.svg");
-            margin-left: 16px;
-          }
-        }
-      }
-    }
-  }
 }
-
-.check {
-  display: grid;
-  place-content: center;
-
-  appearance: none;
-  background-color: #fff;
-  margin: 0;
-
-  cursor: pointer;
-  width: 1.15em;
-  height: 1.15em;
-  border: 2px solid #737d8c;
-  border-radius: 6px;
-  transform: translateY(-0.075em);
-  transition: all 0.3s ease-in-out;
-  &::before {
-    content: url("../../../img/check.svg");
-    width: 100%;
-    height: 100%;
-    display: grid;
-    margin-bottom: 4px;
-    transform: scale(0);
-    transition: 120ms transform ease-in-out;
-  }
-  &:checked {
-    border: none;
-    background-color: #2581d6;
-  }
-  &:checked::before {
-    transform: scale(1);
-  }
-  &:disabled {
-    border: 2px solid #e0e5eb;
-  }
-  &:checked:disabled {
-    border: none;
-    opacity: 0.4;
-  }
-}
-.check__label {
-  display: grid;
-  grid-template-columns: 1em auto;
-  gap: 0.5em;
-
-  cursor: pointer;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 130%;
-  color: #454b54;
-
-  &:not(:last-child) {
-    margin-bottom: 15px;
-  }
-  &:has(.check:disabled) {
-    color: #9da4af;
-  }
-}
-
-.filter-show-hide {
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-}
-.setbtn__show {
-  transform: rotate(180deg);
-}
-
-.reset-btn {
-}
-
-.shop-pagination {
-  margin-top: 30px;
-  margin-bottom: 100px;
-
-  @include mq.mq($until: mobile) {
-    display: none;
-    margin: 0px;
-    padding: 0px;
-  }
-  .shop-pagination__wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 130%;
-    color: var(--hover-color);
-
-    .shop-pagination__link {
-      cursor: pointer;
-      &_disabled {
-        color: #9da4af;
-      }
-      &:first-child {
-        margin-right: 30px;
-      }
-      &:last-child {
-        margin-left: 30px;
-      }
-    }
-    .shop-pagination__btn {
-      padding: 16px 32px;
-      outline: 2px solid #eaf2fb;
-      border-radius: 16px;
-      cursor: pointer;
-      box-sizing: border-box;
-      &_active,
-      &:hover {
-        outline: none;
-        background: #d5e5f6;
-      }
-    }
-  }
-}
-
 .about-shop__img {
   max-width: 100%;
   margin-left: 30px;

@@ -75,7 +75,7 @@
   }
   &__wrapper {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr auto;
     grid-column-gap: 60px;
     grid-row-gap: 30px;
     padding-top: 45px;
@@ -132,13 +132,18 @@
   &__img {
     min-width: 100%;
     min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 45px;
     img {
       width: 100%;
+      min-height: 100%;
       border-radius: 40px;
       object-fit: cover;
-      padding-right: 45px;
     }
     @include mq.mq($until: mobile) {
+      padding-right: 0px;
       img {
         display: flex;
         padding-right: 0px;

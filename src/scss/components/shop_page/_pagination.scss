@@ -1,0 +1,45 @@
+.shop-pagination {
+  margin-top: 30px;
+  margin-bottom: 100px;
+
+  @include mq.mq($until: mobile) {
+    display: none;
+    margin: 0px;
+    padding: 0px;
+  }
+  .shop-pagination__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 130%;
+    color: var(--hover-color);
+
+    .shop-pagination__link {
+      cursor: pointer;
+      &_disabled {
+        color: #9da4af;
+      }
+      &:first-child {
+        margin-right: 30px;
+      }
+      &:last-child {
+        margin-left: 30px;
+      }
+    }
+    .shop-pagination__btn {
+      padding: 16px 32px;
+      outline: 2px solid #eaf2fb;
+      border-radius: 16px;
+      cursor: pointer;
+      box-sizing: border-box;
+      &_active,
+      &:hover {
+        outline: none;
+        background: #d5e5f6;
+      }
+    }
+  }
+}

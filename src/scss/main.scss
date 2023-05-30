@@ -6,6 +6,10 @@
 @import "settings";
 @import "utils";
 
+@import "./components/checkbox";
+@import "./components/shop_page/pagination";
+@import "./components/shop_page/shop-filter";
+
 // Main page
 @import "./components/header";
 @import "./components/hero";
@@ -20,6 +24,7 @@
 @import "./components/footer";
 @import "./components/mob-footer";
 @import "./components/mob-nav";
+@import "./components/shop-mob-nav";
 
 // Shop page
 @import "./components/shop_page/promo";
