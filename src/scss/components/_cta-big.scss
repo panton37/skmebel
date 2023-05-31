@@ -1,11 +1,5 @@
 .cta-big {
-  margin-top: 100px;
-
-  // background-image: url("../../img/kitchen_cta.png");
-  // background-repeat: no-repeat;
-  // background-position: center right;
   @include mq.mq($until: mobile) {
-    margin-top: 50px;
     margin-bottom: 125px;
   }
   &__wrapper {

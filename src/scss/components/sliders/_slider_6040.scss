@@ -42,13 +42,22 @@
 .slider_6040-slide:nth-child(even) {
   width: 40%;
   height: 100%;
+  @include mq.mq($until: mobile) {
+    width: 20%;
+    img {
+      border-radius: 12px 0 0 12px;
+    }
+    height: 190px;
+  }
 }
 .slider_6040-slide:nth-child(odd) {
   width: 60%;
   height: 100%;
   @include mq.mq($until: mobile) {
+    width: 80%;
     img {
-      border-radius: 12px 0 0 12px;
+      min-height: 190px;
+      border-radius: 12px;
     }
   }
 }

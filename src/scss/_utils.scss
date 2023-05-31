@@ -183,9 +183,18 @@ body {
 .mb-25px {
   margin-bottom: 25px;
 }
+.mb-45_25 {
+  margin-bottom: 45px;
+  @include mq.mq($until: mobile) {
+    margin-bottom: 25px;
+  }
+}
 
 .mw60per {
   max-width: 60%;
+  @include mq.mq($until: mobile) {
+    max-width: 100%;
+  }
 }
 
 .float-right {

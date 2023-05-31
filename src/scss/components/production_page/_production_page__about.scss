@@ -1,0 +1,17 @@
+.production-page__about {
+  display: grid;
+  grid-template-areas:
+    "img"
+    "text";
+  @include mq.mq($until: mobile) {
+    grid-template-areas:
+      "text"
+      "img";
+  }
+}
+.production-page__big-img {
+  grid-area: img;
+}
+.production-page__text {
+  grid-area: text;
+}
