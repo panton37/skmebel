@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+  @include('partials/kitchen_page/kitchen-head.html')
+
+  <body class="page__body">
+    <div class="site-container">
+      @include('partials/header.html')
+      <main class="main">
+        <div class="breadcrumbs breadcrumbs_margins container">
+          <div class="breadcrumbs__item">СК Мебель</div>
+          <div class="breadcrumbs__item">
+            Готовые кухонные гарнитуры и комплекты
+          </div>
+          <div class="breadcrumbs__item breadcrumbs__item_active">
+            Кухонный гарнитур Teramo
+          </div>
+        </div>
+        @include('partials/sliders/slider_4060.html')
+        @include('partials/kitchen_page/kitchen-descr.html')
+        @include('partials/kitchen_page/slider_main__kitchen.html')
+        @include('partials/kitchen_page/about-kitchen.html')
+        @include('partials/sliders/slider_4products.html')
+      </main>
+      @include('partials/footer.html') @include('partials/mob-footer.html')
+      @include('partials/mob-nav.html')
+    </div>
+  </body>
+</html>

@@ -284,6 +284,10 @@ const htmlInclude = () => {
 
 const watchFiles = () => {
   browserSync.init({
+    ui: {
+      port: 3029,
+    },
+    port: 3030,
     server: {
       baseDir: `${buildFolder}`,
     },

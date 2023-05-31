@@ -6,6 +6,9 @@
   --content-width: 1760px;
   --container-offset: 80px;
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+  --wide-container-width: calc(
+    var(--content-width) + (var(--container-offset) * 4)
+  );
 
   --mob-content-width: 401px;
   --mob-container-offset: 20px;

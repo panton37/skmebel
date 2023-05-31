@@ -1,0 +1,19 @@
+.cta-big {
+  &__wrapper-kitchen {
+    grid-template-columns: 50% 1fr;
+    @include mq.mq($until: mobile) {
+      grid-template-columns: 1fr;
+    }
+  }
+  .contact-form {
+    .order-btn__wrapper-kitchen {
+      min-width: 100%;
+      margin-top: 50px;
+      flex-direction: column;
+      align-items: baseline;
+    }
+    .personal-data-kitchen {
+      margin-top: 12px;
+    }
+  }
+}

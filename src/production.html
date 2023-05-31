@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+  @include('partials/production_page/production_page__head.html')
+
+  <body class="page__body">
+    <div class="site-container">
+      @include('partials/header.html')
+      <main class="main">
+        <div class="breadcrumbs breadcrumbs_margins container">
+          <div class="breadcrumbs__item">СК Мебель</div>
+          <div class="breadcrumbs__item breadcrumbs__item_active">
+            Производство
+          </div>
+        </div>
+        <div class="container">
+          <h1 class="caption-60">Производство</h1>
+        </div>
+        @include('partials/sliders/slider_6040.html')
+        @include('partials/production_page/production_page__descr.html')
+        @include('partials/production_page/production_page__advantages.html')
+        @include('partials/wide-image.html')
+        <!-- @include('partials/production_page/production_page__about.html') -->
+        @include('partials/sliders/slider_4products.html')
+      </main>
+      @include('partials/footer.html') @include('partials/mob-footer.html')
+      @include('partials/mob-nav.html')
+    </div>
+  </body>
+</html>

@@ -73,51 +73,52 @@
       grid-template-columns: repeat(auto-fit, minmax(173px, 1fr));
       grid-gap: 14px;
     }
-    .shop-item {
-      cursor: pointer;
-      transition: color 0.3s ease-in-out;
-      &:hover {
-        .shop-item__header {
-          color: var(--hover-color);
-        }
-      }
-      &:focus {
-        outline: none;
-      }
-      &:active {
-        color: var(--hover-color);
-      }
-      img {
-        width: 100%;
-        margin-bottom: 20px;
-      }
-      &__header {
-        transition: color var(--hover-time);
-        @include mq.mq($until: mobile) {
-          font-weight: 500;
-          font-size: 18px;
-          line-height: 110%;
-        }
-      }
-      &__decription {
-        @include mq.mq($until: mobile) {
-          font-weight: 400;
-          font-size: 14px;
-          line-height: 140%;
-        }
-      }
-      &__price {
-        margin-top: 27px;
-        font-weight: 600;
-        font-size: 30px;
-        line-height: 130%;
-        color: #17191c;
-        @include mq.mq($until: mobile) {
-          font-weight: 500;
-          font-size: 18px;
-          line-height: 110%;
-        }
-      }
+  }
+}
+
+.shop-item {
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+  &:hover {
+    .shop-item__header {
+      color: var(--hover-color);
+    }
+  }
+  &:focus {
+    outline: none;
+  }
+  &:active {
+    color: var(--hover-color);
+  }
+  img {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  &__header {
+    transition: color var(--hover-time);
+    @include mq.mq($until: mobile) {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 110%;
+    }
+  }
+  &__decription {
+    @include mq.mq($until: mobile) {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 140%;
+    }
+  }
+  &__price {
+    margin-top: 27px;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 130%;
+    color: #17191c;
+    @include mq.mq($until: mobile) {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 110%;
     }
   }
 }

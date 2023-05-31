@@ -50,6 +50,10 @@ a {
   display: none !important; /* stylelint-disable-line declaration-no-important */
 }
 
+img {
+  max-width: 100%;
+}
+
 .btn-reset {
   border: none;
   padding: 0;
@@ -93,6 +97,16 @@ a {
   margin: 0 auto;
   padding: 0 var(--container-offset);
   max-width: var(--container-width);
+  @include mq.mq($until: mobile) {
+    padding: 0 var(--mob-container-offset);
+    max-width: var(--mob-container-width);
+  }
+}
+
+.wide-container {
+  margin: 0 auto;
+  padding: 0 var(--container-offset);
+  max-width: var(--wide-container-width);
   @include mq.mq($until: mobile) {
     padding: 0 var(--mob-container-offset);
     max-width: var(--mob-container-width);

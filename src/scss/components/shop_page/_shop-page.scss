@@ -3,40 +3,7 @@
   .shop__page {
     margin-bottom: 0;
   }
-  &__breadcrumbs {
-    width: 100%;
-    margin-bottom: 27px;
 
-    display: flex;
-    align-items: center;
-    gap: 0px;
-
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 140%;
-    color: #454b54;
-    @include mq.mq($until: mobile) {
-      font-weight: 400;
-      font-size: 14px;
-      line-height: 140%;
-    }
-  }
-  .breadcrumbs__item {
-    @include mq.mq($until: mobile) {
-      flex-shrink: 0;
-    }
-    display: flex;
-    &:not(:last-child)::after {
-      content: "·";
-      width: 27px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    &_active {
-      color: #9da4af;
-    }
-  }
   &__wrapper {
     display: grid;
     grid-template-columns: 363px 1fr;

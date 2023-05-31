@@ -6,14 +6,14 @@ body {
   position: relative;
 }
 
-.container-offset {
-  padding-left: var(--container-offset);
-  padding-right: var(--container-offset);
-  @include mq.mq($until: mobile) {
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
+// .container-offset {
+//   padding-left: -var(--container-offset);
+//   padding-right: -var(--container-offset);
+//   @include mq.mq($until: mobile) {
+//     padding-left: 0;
+//     padding-right: 0;
+//   }
+// }
 
 // Buttons
 .primary-btn {
@@ -28,6 +28,7 @@ body {
   line-height: 130%;
   text-decoration: none;
   transition: all 0.3s ease-in-out;
+  text-align: center;
   svg path {
     fill: var(--light-accent);
   }
@@ -37,6 +38,9 @@ body {
     svg path {
       fill: var(--accent-color);
     }
+  }
+  &_w100 {
+    min-width: 100%;
   }
 }
 .secondary-btn {
@@ -102,9 +106,11 @@ body {
   font-size: 60px;
   line-height: 110%;
   letter-spacing: -0.02em;
+  margin-bottom: 40px;
   @include mq.mq($until: mobile) {
     font-size: 32px;
     line-height: 105%;
+    margin-bottom: 15px;
   }
 }
 .caption-36 {
@@ -134,6 +140,7 @@ body {
   font-size: 20px;
   line-height: 150%;
   letter-spacing: -0.01em;
+  margin-bottom: 42px;
   @include mq.mq($until: mobile) {
     font-size: 16px;
     line-height: 140%;
@@ -166,6 +173,24 @@ body {
 }
 
 // etc
+
+.mb-section {
+  margin-bottom: 100px;
+  @include mq.mq($until: mobile) {
+    margin-bottom: 50px;
+  }
+}
+.mb-25px {
+  margin-bottom: 25px;
+}
+
+.mw60per {
+  max-width: 60%;
+}
+
+.float-right {
+  float: right;
+}
 
 .bg-wrapp {
   background-color: var(--dark-bg);

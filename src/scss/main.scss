@@ -12,10 +12,10 @@
 
 // Main page
 @import "./components/header";
+@import "./components/breadcrumbs";
 @import "./components/hero";
 @import "./components/projects";
 @import "./components/cta";
-@import "./components/carusel";
 @import "./components/kitchens";
 @import "./components/shop";
 @import "./components/calc";
@@ -25,7 +25,19 @@
 @import "./components/mob-footer";
 @import "./components/mob-nav";
 @import "./components/shop-mob-nav";
+@import "./components/wide-image";
+
+@import "./components/sliders/slider_main";
+@import "./components/sliders/slider_4060";
+@import "./components/sliders/slider_6040";
+@import "./components/sliders/slider_4products";
 
 // Shop page
 @import "./components/shop_page/promo";
 @import "./components/shop_page/shop-page";
+
+@import "./components/kitchen_page/kitchen-descr.scss";
+@import "./components/kitchen_page/kitchen-cta-big.scss";
+@import "./components/kitchen_page/kitchen-etc.scss";
+
+@import "./components/production_page/_production_page__advantages.scss";

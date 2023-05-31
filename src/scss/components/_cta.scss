@@ -44,6 +44,7 @@
         justify-content: center;
         @include mq.mq($until: mobile) {
           padding: 20px 15px;
+          padding-bottom: 0px;
           max-width: 100%;
         }
         .cta__header {
