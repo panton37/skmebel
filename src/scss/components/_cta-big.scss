@@ -2,28 +2,6 @@
   @include mq.mq($until: mobile) {
     margin-bottom: 125px;
   }
-  &__wrapper {
-    display: grid;
-    grid-template-columns: 46% 1fr;
-    gap: 80px;
-    border-radius: 60px;
-    background-color: var(--dark-bg);
-    overflow: hidden;
-    @include mq.mq($until: mobile) {
-      grid-template-columns: 1fr;
-      gap: 26px;
-      border-radius: 12px;
-      overflow: unset;
-    }
-  }
-  &__text {
-    padding-top: 75px;
-    padding-left: 80px;
-    padding-bottom: 80px;
-    @include mq.mq($until: mobile) {
-      padding: 20px 20px 0px 20px;
-    }
-  }
   &__img {
     img {
       width: 100%;
@@ -40,56 +18,82 @@
       }
     }
   }
-  .contact-form {
-    margin-top: 40px;
-    @include mq.mq($until: mobile) {
-      margin-top: 25px;
-    }
-    &__input {
-      min-width: 100%;
-      font-weight: 400;
-      font-size: 20px;
-      line-height: 150%;
-      letter-spacing: -0.01em;
-      color: var(--input-text-color);
-      background-color: var(--dark-bg);
-      padding: 17px 0px;
-      border: none;
-      border-bottom: 1px solid #e3e5e8;
-      @include mq.mq($until: mobile) {
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 140%;
-      }
-      &:focus {
-        outline: none;
-      }
-    }
-    .order-btn__wrapper {
-      margin-top: 80px;
-      display: flex;
-      align-items: center;
-      gap: 30px;
-      @include mq.mq($until: mobile) {
-        margin-top: 50px;
-        flex-direction: column;
-        .order-btn {
-          width: 100%;
-          font-weight: 500;
-          font-size: 16px;
-          line-height: 130%;
-        }
-        .order-btn__wrap {
-          min-width: 100%;
-        }
-      }
-    }
-    .personal-data {
-      color: var(--blind-font-color);
-    }
+}
+
+.cta-big__wrapper {
+  display: grid;
+  grid-template-columns: 46% 1fr;
+  gap: 80px;
+  border-radius: 60px;
+  background-color: var(--dark-bg);
+  overflow: hidden;
+  @include mq.mq($until: mobile) {
+    grid-template-columns: 1fr;
+    gap: 26px;
+    border-radius: 12px;
+    overflow: unset;
   }
 }
-.contact-form__input.focus-visible {
-  outline: 1px solid var(--accent-color);
-  outline-offset: 3px;
+
+.cta-big__text {
+  padding-top: 75px;
+  padding-left: 80px;
+  padding-bottom: 80px;
+  @include mq.mq($until: mobile) {
+    padding: 20px 20px 0px 20px;
+  }
 }
+
+.contact-form {
+  margin-top: 40px;
+  @include mq.mq($until: mobile) {
+    margin-top: 25px;
+  }
+  &__input {
+    min-width: 100%;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
+    letter-spacing: -0.01em;
+    color: var(--input-text-color);
+    background-color: var(--dark-bg);
+    padding: 17px 0px;
+    border: none;
+    border-bottom: 1px solid #e3e5e8;
+    @include mq.mq($until: mobile) {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 140%;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+  .order-btn__wrapper {
+    margin-top: 80px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    @include mq.mq($until: mobile) {
+      margin-top: 50px;
+      flex-direction: column;
+      .order-btn {
+        width: 100%;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 130%;
+      }
+      .order-btn__wrap {
+        min-width: 100%;
+      }
+    }
+  }
+  .personal-data {
+    color: var(--blind-font-color);
+  }
+}
+
+// .contact-form__input.focus-visible {
+//   outline: 1px solid var(--accent-color);
+//   outline-offset: 3px;
+// }
