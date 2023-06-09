@@ -1,46 +1,50 @@
 @use "./mixins/mq" as mq;
 
-@import "vars";
-@import "mixins";
-@import "fonts";
-@import "settings";
-@import "utils";
-
-@import "./components/checkbox";
-@import "./components/shop_page/pagination";
-@import "./components/shop_page/shop-filter";
+@import "vars.scss";
+@import "mixins.scss";
+@import "fonts.scss";
+@import "settings.scss";
+@import "utils.scss";
 
 // Main page
-@import "./components/header";
-@import "./components/breadcrumbs";
-@import "./components/hero";
-@import "./components/projects";
-@import "./components/cta";
-@import "./components/kitchens";
-@import "./components/shop";
-@import "./components/calc";
-@import "./components/about";
-@import "./components/cta-big";
-@import "./components/footer";
-@import "./components/mob-footer";
-@import "./components/mob-nav";
-@import "./components/shop-mob-nav";
-@import "./components/wide-image";
+@import "./components/header.scss";
+@import "./components/breadcrumbs.scss";
+@import "./components/hero.scss";
+@import "./components/projects.scss";
+@import "./components/cta.scss";
+@import "./components/kitchens.scss";
+@import "./components/shop.scss";
+@import "./components/calc.scss";
+@import "./components/about.scss";
+@import "./components/cta-big.scss";
+@import "./components/footer.scss";
+@import "./components/mob-footer.scss";
+@import "./components/mob-nav.scss";
+@import "./components/shop-mob-nav.scss";
+@import "./components/wide-image.scss";
 
-@import "./components/sliders/slider_main";
-@import "./components/sliders/slider_4060";
-@import "./components/sliders/slider_6040";
-@import "./components/sliders/slider_4products";
+// Custom elements
+@import "./components/checkbox.scss";
+@import "./components/sliders/slider_main.scss";
+@import "./components/sliders/slider_4060.scss";
+@import "./components/sliders/slider_6040.scss";
+@import "./components/sliders/slider_4products.scss";
 
 // Shop page
-@import "./components/shop_page/promo";
-@import "./components/shop_page/shop-page";
+@import "./components/shop_page/shop-page.scss";
+@import "./components/shop_page/_shop_page__promo.scss";
+@import "./components/shop_page/_shop_page__pagination.scss";
+@import "./components/shop_page/_shop_page__filter.scss";
 
-@import "./components/kitchen_page/kitchen-descr.scss";
-@import "./components/kitchen_page/kitchen-cta-big.scss";
+// Single kitchen page
+@import "./components/kitchen_page/kitchen_page__description.scss";
+@import "./components/kitchen_page/_kitchen_page__cta-big.scss";
 @import "./components/kitchen_page/kitchen-etc.scss";
 
+// Production page
 @import "./components/production_page/_production_page__advantages.scss";
 @import "./components/production_page/_production_page__about.scss";
 
+// Contacts page
 @import "./components/contacts_page/_contacts_page__contacts.scss";
+@import "./components/contacts_page/_contacts_page__map.scss";

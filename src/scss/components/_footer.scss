@@ -1,15 +1,15 @@
 .footer {
   margin-top: 80px;
   padding-bottom: 40px;
+  @include mq.mq($until: mobile) {
+    display: none;
+  }
   &__wrapper {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-column-gap: 32px;
     padding-top: 40px;
     border-top: 1px solid #eeeeee;
-    @include mq.mq($until: mobile) {
-      display: none;
-    }
   }
   &-list {
     list-style-type: none;

@@ -1,0 +1,8 @@
+.map {
+}
+.map__frame {
+  min-height: 454px;
+  @include mq.mq($until: mobile) {
+    min-height: 447px;
+  }
+}

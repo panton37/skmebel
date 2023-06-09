@@ -7,7 +7,7 @@
   }
 }
 
-.swiper .swiper-wrapper {
+.swiper-wrapper {
   height: auto;
   @include mq.mq($until: mobile) {
     max-height: 214px;

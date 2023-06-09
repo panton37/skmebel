@@ -1,0 +1,123 @@
+.shop-filter {
+  @include mq.mq($until: mobile) {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.form-item {
+  &:not(:last-child) {
+    margin-bottom: 25px;
+  }
+}
+
+.form-item__header {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 130%;
+
+  @include mq.mq($until: mobile) {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 130%;
+  }
+}
+
+.show-more {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+  color: #2086e4;
+
+  &::after {
+    content: url("../../../img/show-more.svg");
+    margin-left: 16px;
+  }
+}
+
+.form-item__input-wrap {
+  display: flex;
+  margin-top: 15px;
+  @include mq.mq($until: mobile) {
+    margin-top: 10px;
+  }
+}
+
+.form-item__header-wrapper {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price-input {
+  padding: 16px 20px;
+  &:first-child {
+    max-width: 50%;
+    border: 2px solid #e0e5eb;
+    border-radius: 15px 0px 0px 15px;
+  }
+  &:last-child {
+    max-width: 50%;
+    border: 2px solid #e0e5eb;
+    border-left: none;
+    border-radius: 0px 15px 15px 0px;
+  }
+}
+
+.shop-filter__mob-header {
+  display: none;
+  @include mq.mq($until: mobile) {
+    margin-bottom: 25px;
+    margin-left: -20px;
+    margin-right: -20px;
+    height: 65px;
+    padding-left: 30px;
+    padding-right: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+    border: 1px solid #eeeeee;
+    h3 {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 140%;
+      color: #737d8c;
+    }
+  }
+}
+
+.filter-set {
+  border: none;
+  padding: 0;
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+  &_hide {
+    max-height: 0px;
+    overflow: hidden;
+    opacity: 0;
+  }
+}
+
+.filter-show-hide {
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.setbtn__show {
+  transform: rotate(180deg);
+}
